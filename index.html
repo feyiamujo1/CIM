@@ -29,7 +29,7 @@
                 </button>
             </div>
             <div id="sideBar" transition-style class="sideBar --in-custom fixed h-[100vh] z-[49] font-garamond bg-custom-red left-0 right-0 top-0 bottom-0 mx-auto flex flex-col items-center justify-center overflow-hidden opacity-100 transition-all ease-in duration-500 hidden" >
-                <div class="flex flex-col gap-2 text-[34px] sm:text-[46px] md:text-[56px] font-semibold w-full h-fit text-center items-center justify-center text-white">
+                <div class="flex flex-col gap-2 md:gap-0 text-[34px] sm:text-[46px] md:text-[56px] font-semibold w-full h-fit text-center items-center justify-center text-white">
                     <p class="cursor-pointer md:hover:text-gray-500 active:text-gray-500">Home</p>
                     <p class="cursor-pointer md:hover:text-gray-500 active:text-gray-500">About</p>
                     <p class="cursor-pointer md:hover:text-gray-500 active:text-gray-500">Our Services</p>
@@ -418,12 +418,15 @@
       }
     //   document.body.classList.toggle('lock-scroll');
     });
-
-    setTimeout(
-        function(){
-            $(".preloader_bg").fadeToggle();
-        }, 9000
-    )
+    
+    window.addEventListener("load", function(){
+        $(".preloader_bg").fadeToggle();
+    })
+    // setTimeout(
+    //     function(){
+    //         $(".preloader_bg").fadeToggle();
+    //     }, 9000
+    // )
   </script>
 </body>
 </html>
