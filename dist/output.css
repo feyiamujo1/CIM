@@ -549,12 +549,12 @@ video {
   right: 0px;
 }
 
-.right-14{
-  right: 3.5rem;
-}
-
 .right-20{
   right: 5rem;
+}
+
+.right-\[10\%\]{
+  right: 10%;
 }
 
 .top-0{
@@ -563,6 +563,22 @@ video {
 
 .top-6{
   top: 1.5rem;
+}
+
+.right-\[5\%\]{
+  right: 5%;
+}
+
+.right-\[3\%\]{
+  right: 3%;
+}
+
+.right-\[4\%\]{
+  right: 4%;
+}
+
+.right-\[4\.2\%\]{
+  right: 4.2%;
 }
 
 .z-10{
