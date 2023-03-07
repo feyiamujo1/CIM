@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/dist/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/transition-style">
+    <!-- <script src="./src/script.js"></script> -->
+    <!-- <link href="/dist/hamburgers.css" rel="stylesheet"> -->
+    <link href="dist/hamburgers.css" rel="stylesheet">
+    <title>Home</title>
+</head>
+<body class="bg-black">
+    <div class="bg-custom-red fixed z-[999] w-full h-full flex flex-col items-center justify-center preloader_bg">
+        <!-- <img class=" w-full h-full" src="./src/images/rotate_AdobeExpress.gif" alt="" /> -->
+        <p class="text-[34px] sm:text-[46px] md:text-[56px] text-white font-garamond font-semibold w-fit h-fit m-auto"><span id="spin"></span></p>
+    </div>
+    <div class="h-screen w-full relative">
+        <div class="absolute top-0 py-6 w-11/12  left-0 z-[100] right-0 mx-auto flex flex-row items-center justify-between">
+            <img class="w-12" src="./src/images/cim_logo.png" />
+            <div class="relative cursor-pointer z-[100]" >
+                <button class="hamburger hamburger--spin" type="button" onclick="toggleNavbar">
+                    <span class="hamburger-box">
+                      <span class="hamburger-inner"></span>
+                    </span>
+                </button>
+            </div>
+            <div id="sideBar" transition-style class="sideBar --in-custom fixed h-[100vh] z-[49] font-garamond bg-custom-red left-0 right-0 top-0 bottom-0 mx-auto flex flex-col items-center justify-center overflow-hidden opacity-100 transition-all ease-in duration-500 hidden" >
+                <div class="flex flex-col gap-2 text-[34px] sm:text-[46px] md:text-[56px] font-semibold w-full h-fit text-center items-center justify-center text-white">
+                    <p class="cursor-pointer md:hover:text-gray-500 active:text-gray-500">Home</p>
+                    <p class="cursor-pointer md:hover:text-gray-500 active:text-gray-500">About</p>
+                    <p class="cursor-pointer md:hover:text-gray-500 active:text-gray-500">Our Services</p>
+                    <p class="cursor-pointer md:hover:text-gray-500 active:text-gray-500">Fan Zone</p>
+                    <p class="cursor-pointer md:hover:text-gray-500 active:text-gray-500">Sport Creative</p>
+                    <p class="cursor-pointer md:hover:text-gray-500 active:text-gray-500">Contact</p>
+                </div>
+            </div>
+        </div>
+        <video class="w-screen h-screen sm:h-screen absolute object-cover z-[-100] brightness-[0.35]" preload="auto" autoPlay loop muted playsInline>
+            <source src="./src/videos/Produce_15.mp4" type="video/mp4" />
+        </video>
+        <div class="max-[935px]:hidden absolute z-10 right-20 top-0 bottom-0 my-auto w-fit h-10 overflow-hidden text-white flex gap-3 items-center">
+            <div class="customPrevBtn h-full group flex cursor-pointer items-center relative">
+                <p class="cursor-pointer group-hover:-translate-y-8 transition-all ease-in w-full py-3">Prev</p>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon line w-10 absolute h-10 hidden group-hover:block" viewBox="0 0 24 24"><path d="M21 12H3m3-3-3 3 3 3" style="fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5"/></svg>
+            </div>
+            <div class="w-12 bg-white h-0.5"></div>
+            <div class="customNextBtn h-full group flex cursor-pointer items-center relative">
+                <p class="cursor-pointer group-hover:-translate-y-8 transition-all ease-in w-full py-3 ">Next</p>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon line w-10 absolute h-10 hidden group-hover:block rotate-180" viewBox="0 0 24 24"><path d="M21 12H3m3-3-3 3 3 3" style="fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5"/></svg>
+            </div>
+        </div>
+        <div class="absolute left-[4%] bottom-10 flex items-start gap-1 overflow-hidden font-serif">
+            <p class="text-white font-semibold -ml-3.5 text-5xl">0<span id="currentSlide">1</span> </p><span class="text-sm align-super text-white font-medium">/3</span>
+        </div>
+        <div class="owl-carousel owl-theme ">
+            <div class="item">
+                <div class="w-11/12  mx-auto h-screen flex items-center">
+                    <div class=" sm:w-full md:w-[700px] md:min-w-[700px] h-fit space-y-5">
+                        <h1 class="text-[34px] sm:text-[46px] md:text-[56px] font-semibold text-white font-garamond leading-none">
+                            Marketing & Brand Communication
+                        </h1>
+                        <p class="text-white text-sm">
+                            We help businesses develop a clear and consistent brand message that promotes their brand, and build a strong visual identity that reflects their values. 
+                            Allowing businesses to stand out in a competitive market and connect with their target audience.
+                        </p>
+                        <p class="text-white px-6 py-3 border border-gray-500 w-fit cursor-pointer font-semibold text-base discover-button bg-dark-bg backdrop-blur-sm">Discover</p> 
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="w-11/12  mx-auto h-screen flex items-center">
+                    <div class=" sm:w-full md:w-[700px] md:min-w-[700px] h-fit space-y-5">
+                        <h1 class="text-[34px] sm:text-[46px] md:text-[56px] font-semibold text-white font-garamond leading-none">
+                            Project & Business Development
+                        </h1>
+                        <p class="text-white text-sm">
+                            We help businesses pursue growth opportunities by identifying new markets, developing new products or services, and finding new business partners or investors. 
+                        </p>
+                        <p class="text-white px-6 py-3 border border-gray-500 w-fit cursor-pointer font-semibold text-base discover-button bg-dark-bg backdrop-blur-sm">Discover</p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="w-11/12  mx-auto h-screen flex items-center">
+                    <div class=" sm:w-full md:w-[700px] md:min-w-[700px] h-fit space-y-5">
+                        <h1 class="text-[34px] sm:text-[46px] md:text-[56px] font-semibold text-white font-garamond leading-none">
+                            Event Marketing and Management
+                        </h1>
+                        <p class="text-white text-sm font-medium">
+                            We help businesses plan and execute successful events that engage customers and generate buzz. Our expertises ranges from developing creative concepts, to logistics coordination, and promotion to target audiences.
+                        </p>
+                        <p class="text-white px-6 py-3 border border-gray-500 w-fit cursor-pointer font-semibold text-base discover-button bg-dark-bg backdrop-blur-sm">Learn More</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class=" relative h-fit bg-white">
+        <div class=" h-fit w-11/12 py-8 md:py-16 mx-auto flex flex-row justify-between gap-3">
+            <div class="">
+                <!-- <p class="pl-5 border-l-4 border-custom-red font-semibold text-custom-red">About Us</p> -->
+                <div class="w-fit flex flex-row items-center gap-3 mb-2">
+                    <div class="w-10 h-1 bg-custom-red rounded-full"> </div>
+                    <h1 class="w-fit font-bold text-[34px] sm:text-[46px] md:text-[56px] font-garamond mb-0 py-0">About Us</h1>
+                    <div class="w-10 h-1 bg-custom-red rounded-full"> </div>
+                </div>
+                <div class="first_dots_section sm:h-[400px] md:hidden">
+                    <img src="./src/images/connor-coyne-OgqWLzWRSaI-unsplash.jpg" class="h-full w-full object-cover object-center"/>
+                </div>
+                <p class="font-medium max-w-[700px] mb-4 pr-0 md:pr-5">
+                    Clean Image Limited is a marketing, communications, and advertising consultancy firm with vast experience in organizing major sporting events, 
+                    with football serving as one of our main areas of focus.
+                    <!-- We began as a group of professional sports administrators drawn from the global sports industry with the common vision of advancing 
+                    the development of sports globally with a strategic interest in emerging sporting nations. -->
+                </p>
+                <p class="font-medium max-w-[700px] pr-0 md:pr-5 mb-4">
+                    Our core values stand on the premise of creating robust platforms for rapid transformation of sport through global
+                    partnership and development of sustainable projects for sports development for nations and millions of
+                    people across the globe.
+                </p>
+                <p class="font-medium max-w-[700px] mb-6 pr-0 md:pr-5 ">
+                    We create commercial opportunities for optimum brand maximization,
+                    marketing communication, research and development, technical assistance, grassroots development, elite
+                    sports commercialization, content design, training and corporate identity management.
+                </p>
+                <p class=" px-6 py-3 border border-gray-500 w-fit cursor-pointer text-base discover-button  backdrop-blur-sm text-black font-semibold">Read More</p> 
+            </div>
+            <div class="dots_section hidden md:block">
+                <img src="./src/images/connor-coyne-OgqWLzWRSaI-unsplash.jpg" class="h-full w-[400px] "/>
+            </div>
+        </div>
+    </div>
+    <div class="pt-8 md:pt-16 w-full md:w-11/12 mx-auto bg-fanzone-image bg-cover bg-no-repeat bg-center bg-fixed">
+        <div class="pb-8 md:pb-16 w-11/12 mx-auto md:w-full">
+            <h1 class="w-fit font-bold text-[34px] sm:text-[46px] md:text-[56px] font-garamond text-white mx-auto mb-0">Fan Zone</h1>
+            <div class="w-10 h-1 bg-custom-red rounded-full mx-auto -mt-2 mb-6"> </div>
+            <p class="text-white font-medium mx-auto w-fit text-center my-3"> Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+            <p class="px-10 py-3 border border-gray-500 w-fit cursor-pointer text-base discover-button bg-dark-bg backdrop-blur-sm text-white font-medium mx-auto">Visit</p> 
+        </div>
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4"> 
+            <div class="row-span-1 col-span-2 sm:col-span-1 sm:row-span-2  md:row-span-1 overflow-hidden">
+                <img class="w-full h-full object-cover transition-all duration-700 ease-in-out transform hover:scale-125 hover:brightness-50 cursor-pointer" src="./src/images/omar-ram-IvXnC7u6yD0-unsplash.jpg" alt="" />
+            </div>
+            <div class="row-span-2 col-span-2 md:col-span-1 overflow-hidden">
+                <img class="w-full h-full object-cover transition-all duration-700 ease-in-out transform hover:scale-125 hover:brightness-50 cursor-pointer" src="./src/images/medium-shot-smiley-goalkeeper.jpg" alt="" />
+            </div>
+            <div class="sm:col-span-2 row-span-2 overflow-hidden">
+                <img class="w-full h-full object-cover transition-all duration-700 ease-in-out transform hover:scale-125 hover:brightness-50 cursor-pointer" src="./src/images/fauzan-saari-crn276hbbYU-unsplash.jpg" alt="" />
+            </div>
+            <div class="row-span-1 overflow-hidden">
+                <img class="w-full h-full object-cover transition-all duration-700 ease-in-out transform hover:scale-125 hover:brightness-50 cursor-pointer" src="./src/images/fauzan-saari-Y_upPEyxXN8-unsplash.jpg" alt="" />
+            </div>
+            <div class="row-span-1 overflow-hidden">
+                <img class="w-full h-full object-cover transition-all duration-700 ease-in-out transform hover:scale-125 hover:brightness-50 cursor-pointer" src="./src/images/jannik-skorna-mY2ZHBU6GRk-unsplash.jpg" alt="" />
+            </div>
+            <div class="col-span-2 sm:col-span-1 row-span-1 overflow-hidden">
+                <img class="w-full h-full object-cover transition-all duration-700 ease-in-out transform hover:scale-125 hover:brightness-50 cursor-pointer" src="./src/images/jannik-skorna-rrIcdUpghyM-unsplash.jpg" alt="" />
+            </div>
+            <div class="col-span-2 overflow-hidden">
+                <img class="w-full h-full object-cover transition-all duration-700 ease-in-out transform hover:scale-125 hover:brightness-50 cursor-pointer" src="./src/images/omar-ram-tr5IM2lmryw-unsplash.jpg" alt="" />
+            </div>
+        </div>
+    </div>
+    <div class=" relative h-fit bg-white">
+        <div class=" h-fit w-11/12 py-8 md:py-16 mx-auto space-y-3">
+            <div class="w-fit mx-auto md:ml-0 flex flex-row items-center gap-3 mb-2">
+                <div class="w-10 h-1 bg-custom-red rounded-full"> </div>
+                <h1 class="w-fit font-bold text-[34px] sm:text-[46px] md:text-[56px] font-garamond mt-0 pt-0 mb-0 py-0">Our Services</h1>
+                <div class="w-10 h-1 bg-custom-red rounded-full"> </div>
+            </div>
+            <div class="">
+                <div class="flex flex-row gap-8 align-baseline">
+                    <p class="text-base font-medium mb-5">
+                        When you work with us, your company grows and is optimised to mirror the shifting demands of your enterprise.
+                        We provide the following services to serve your company's needs:
+                        <!-- Our mission is to continue to design sports related projects, corporate branding strategy and
+                        create profitable platforms for our clients through innovations,
+                        application of technology and real time engagement of professionals in the industry to deliver transparent and seamless sport projects. 
+                        Our vision is to use sports, culture and effective marketing communication to create a common bond among people, nations and its private sector economy through the development of 
+                        sustainable and competitive platforms for mutually beneficial collaborations.-->
+                    </p>
+                    <p class="hidden md:block px-6 py-3 border border-gray-500 min-w-fit cursor-pointer text-base discover-button  backdrop-blur-sm text-black font-semibold h-fit">Read More</p> 
+                </div>
+                <div class="mb-3 group service_container">
+                    <div class="py-3 border-b cursor-pointer flex flex-row justify-between">
+                        <p class="font-semibold text-base text-custom-red group-active:text-gray-500 md:group-hover:text-gray-500">Marketing and Brand Communication</p>
+                        <div class="group-active:bg-gray-500 md:group-hover:bg-gray-500 arrow-icon">
+                            <!-- <p class="font-semibold text-base text-custom-red ">Marketing and Brand Communication</p> -->
+                            <span class="left-bar"></span>
+                            <span class="right-bar"></span>
+                        </div>
+                    </div>
+                    <div class="dropdown_info transition-all ease-in-out">
+                        <p class="py-3"> 
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet repellat deleniti quidem dolor? Ipsam rerum quo quasi molestias nesciunt laudantium optio et quas consequatur cupiditate, quod nulla temporibus officia dolorem  
+                        </p>
+                    </div>
+                </div>
+                <div class="mb-3 group service_container">
+                    <div class="py-3 border-b cursor-pointer flex flex-row justify-between">
+                        <p class="font-semibold text-base text-custom-red group-active:text-gray-500 md:group-hover:text-gray-500">Project and Business Development</p>
+                        <div class="group-active:bg-gray-500 md:group-hover:bg-gray-500 arrow-icon">
+                            <span class="left-bar"></span>
+                            <span class="right-bar"></span>
+                        </div>
+                    </div>
+                    <div class="dropdown_info">
+                        <p class="py-3"> 
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet repellat deleniti quidem dolor? Ipsam rerum quo quasi molestias nesciunt laudantium optio et quas consequatur cupiditate, quod nulla temporibus officia dolorem  
+                        </p>
+                    </div>
+                </div>
+                <div class="mb-3 group service_container">
+                    <div class="py-3 border-b cursor-pointer flex flex-row justify-between">
+                        <p class="font-semibold text-base text-custom-red group-active:text-gray-500 md:group-hover:text-gray-500">Content Development and PR Solutions</p>
+                        <div class="group-active:bg-gray-500 md:group-hover:bg-gray-500 arrow-icon">
+                            <span class="left-bar"></span>
+                            <span class="right-bar"></span>
+                        </div>
+                    </div>
+                    <div class="dropdown_info">
+                        <p class="py-3"> 
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet repellat deleniti quidem dolor? Ipsam rerum quo quasi molestias nesciunt laudantium optio et quas consequatur cupiditate, quod nulla temporibus officia dolorem  
+                        </p>
+                    </div>
+                </div>
+                <div class="mb-3 group service_container">
+                    <div class="py-3 border-b cursor-pointer flex flex-row justify-between">
+                        <p class="font-semibold text-base text-custom-red group-active:text-gray-500 md:group-hover:text-gray-500">Corporate Branding and Interactive Media</p>
+                        <div class="group-active:bg-gray-500 md:group-hover:bg-gray-500 arrow-icon">
+                            <span class="left-bar"></span>
+                            <span class="right-bar"></span>
+                        </div>
+                    </div>
+                    <div class="dropdown_info">
+                        <p class="py-3"> 
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet repellat deleniti quidem dolor? Ipsam rerum quo quasi molestias nesciunt laudantium optio et quas consequatur cupiditate, quod nulla temporibus officia dolorem  
+                        </p>
+                    </div>
+                </div>
+                <div class="mb-3 group service_container">
+                    <div class="py-3 border-b cursor-pointer flex flex-row justify-between">
+                        <p class="font-semibold text-base text-custom-red group-active:text-gray-500 md:group-hover:text-gray-500">Event Marketing and Management</p>
+                        <div class="group-active:bg-gray-500 md:group-hover:bg-gray-500 arrow-icon">
+                            <span class="left-bar"></span>
+                            <span class="right-bar"></span>
+                        </div>
+                    </div>
+                    <div class="dropdown_info">
+                        <p class="py-3"> 
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet repellat deleniti quidem dolor? Ipsam rerum quo quasi molestias nesciunt laudantium optio et quas consequatur cupiditate, quod nulla temporibus officia dolorem  
+                        </p>
+                    </div>
+                </div>
+                <div class="mb-3 group service_container">
+                    <div class="py-3 border-b cursor-pointer flex flex-row justify-between">
+                        <p class="font-semibold text-base text-custom-red group-active:text-gray-500 md:group-hover:text-gray-500">Sport Marketing</p>
+                        <div class="group-active:bg-gray-500 md:group-hover:bg-gray-500 arrow-icon">
+                            <span class="left-bar"></span>
+                            <span class="right-bar"></span>
+                        </div>
+                    </div>
+                    <div class="dropdown_info">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis eaque officiis aut neque hic eum, cum incidunt ea. Explicabo debitis aut sequi quaerat delectus odio assumenda optio esse? Odio, eos!
+                        </p>
+                    </div>
+                </div>
+                <p class="md:hidden block px-6 py-3 border border-gray-500 w-fit mx-auto cursor-pointer text-base discover-button mt-8 backdrop-blur-sm text-black font-semibold h-fit">Read More</p> 
+            </div>       
+        </div>
+    </div>
+    <div class=" bg-contact-image bg-center bg-cover bg-no-repeat bg-fixed">
+        <div class=" w-11/12 mx-auto text-white flex flex-col md:flex-row justify-between items-center">
+            <div class="py-8 md:py-16">
+                <h1 class="w-fit font-bold text-[34px] sm:text-[46px] md:text-[56px] max-w-[650px] font-garamond text-custom-red leading-none mb-3">Make us a part of your success story</h1>
+                <p class="max-w-[650px] ">Get in touch and see how our industry expertise can help you achieve your business goals.</p>
+            </div>
+            <div class="pb-8 md:py-16">
+                <p class="px-6 py-4 border border-gray-500 w-fit cursor-pointer text-base discover-button bg-dark-bg backdrop-blur-sm text-white font-medium mx-auto">Contact Us</p>
+            </div>
+            <!-- <div class="space-y-3">
+                <p>Address: Plot 59 A, Crescent Fynstone Estate Sahara Homes, Gwarinpa, Abuja.</p>
+                <p>Email: info.cleanimage@gmail.com</p>
+                <p>Tel: +2348023108365, +2348078871506</p>
+            </div> -->
+        </div>
+    </div>
+    <footer class="pt-8 md:pt-16 pb-5 ">
+        <div class="w-11/12 mx-auto flex flex-col md:flex-row gap-4 md:gap-0 md:justify-between md:items-start ">
+            <div>
+                <div>
+                    <img src="./src/images/cim_logo.png" class="w-14 h-14 mb-3.5" alt="">
+                    <p class="text-sm text-white font-medium w-full md:max-w-[360px] ">Lorem, ipsum dolor sit amet consectetur adipisicing elit, ipsum dolor sit amet, ipsum dolor sit amet.</p>
+                </div>
+            </div>
+            <div class="w-fit mx-auto md:mx-0 text-white space-y-5 font-medium"> 
+                <p class="font-semibold mx-auto md:mx-0 text-center md:text-left">Quick Links</p>
+                <div class="space-y-3 text-sm mx-auto md:mx-0 text-center md:text-left"> 
+                    <p class="cursor-pointer active:text-custom-red md:hover:text-custom-red">Home</p>
+                    <p class="cursor-pointer active:text-custom-red md:hover:text-custom-red">Our Services</p>
+                    <p class="cursor-pointer active:text-custom-red md:hover:text-custom-red">Contact Us</p>
+                    <p class="cursor-pointer active:text-custom-red md:hover:text-custom-red">Fan Zone</p>
+                    <p class="cursor-pointer active:text-custom-red md:hover:text-custom-red">Sport Creative</p>
+                </div>  
+                <div class="flex flex-row gap-3">
+                    <div class="w-8 border border-gray-900 discover-button cursor-pointer flex flex-row justify-center items-center p-2 active:bg-custom-red hover:bg-custom-red"><img class="w-4" src='./src/images/facebookicon.png' alt='socials'/></div>
+                    <div class="w-8 border border-gray-900 discover-button cursor-pointer flex flex-row justify-center items-center p-2 active:bg-custom-red hover:bg-custom-red"><img class="w-4" src='./src/images/twittericon.png' alt='socials'/></div>
+                    <!-- <div><img class="w-5" class='smallericon' src='./src/images/igicon.png' alt='socials'/></div> -->
+                    <div class="w-8 border border-gray-900 discover-button cursor-pointer flex flex-row justify-center items-center p-2 active:bg-custom-red hover:bg-custom-red"><img class="w-5" class='smallericon' src='./src/images/linkedinicon.png' alt='socials'/></div>
+                </div>              
+            </div>
+        </div>
+        <div class="w-11/12 mx-auto text-white pt-5">
+            <p class="mx-auto w-fit text-sm">© 2023 Clean Image Limited. All rights reserved.</p>
+        </div>
+    </footer>
+    <!-- We partner with you to continually evolve and optimize to reflect the changing needs of your business. -->
+    
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" type="text/javascript"></script>
+  <script>jQuery.noConflict(true);</script>
+  <script src="./src/script.js"></script>
+  <script>
+    $('.owl-carousel').owlCarousel({
+        items : 1,
+        mouseDrag: true,
+        touchDrag: true,
+        
+        autoHeight: true,
+        
+        animateOut: false,
+        animateIn: false,
+        autoplayHoverPause:false,
+        stopOnHover:false,
+        
+        lazyLoad : false,
+        loop: true,
+        
+        autoplay : true,
+        autoplayTimeout: 5000,
+        autoplayHoverPause: true,
+        autoplaySpeed: 500,
+        
+        nav : false,
+        navSpeed : 500,
+        navText: [ '', '' ],
+        
+        dots: false,
+        dotsSpeed : 500,
+        
+        responsiveClass: true,
+        responsive:{
+        0:{
+            nav:false
+        },
+        450:{
+            nav : false
+        },
+        
+    }
+    })
+    var owl = $('.owl-carousel');
+    owl.owlCarousel();
+    $('.customNextBtn').click(function() {
+        owl.trigger('next.owl.carousel');
+    })
+    // Go to the previous item
+    $('.customPrevBtn').click(function() {
+        owl.trigger('prev.owl.carousel');
+    })
+    owl.on('changed.owl.carousel', function(property) {
+        var currentIndex = property.item.index - 1;
+        var count = property.item.count;
+        if (currentIndex > count) {
+            currentIndex -= count;
+        }
+        if (currentIndex <= 0) {
+            currentIndex += count;
+        }
+        $('#currentSlide').text(currentIndex);
+    })
+    // $( ".arrow-icon" ).click(function() {
+    //     $(this).toggleClass("open");
+    // });
+    $( ".service_container" ).click(function() {
+        $(this).toggleClass("open");
+    });
+  </script>
+  <script> 
+    // Look for .hamburger and sidebar7
+    let toggled = false;
+    var hamburger = document.querySelector(".hamburger");
+    var sideBar = document.querySelector(".sideBar");
+    // On click
+    hamburger.addEventListener("click", function() {
+      // Toggle class "is-active"
+      hamburger.classList.toggle("is-active");
+      hamburger.classList.toggle("fixed");
+      hamburger.classList.toggle("right-14");
+      hamburger.classList.toggle("top-6");
+      sideBar.classList.toggle("hidden");
+      // Do something else, like open/close menu
+      if (toggled){
+        // sideBar.classList.toggle("hidden");
+        sideBar.classList.toggle("in-circle-swoop");
+      }else{
+        // sideBar.classList.toggle("hidden");
+        sideBar.classList.toggle("out-circle-swoop");
+      }
+    //   document.body.classList.toggle('lock-scroll');
+    });
+
+    setTimeout(
+        function(){
+            $(".preloader_bg").fadeToggle();
+        }, 9000
+    )
+  </script>
+</body>
+</html>
