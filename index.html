@@ -490,11 +490,19 @@
         $(".preloader_bg").fadeToggle();
         // $("#bg_video")[0].pause();
         $("#bg_video")[0].play();
+
+
+        
+        $("#bg_video").addEventListener('suspend', () => {
+            $("#bg_video").play();
+        });
+        $("#bg_video").addEventListener('play', () => {
+        // remove play UI
+        console.log(playing);
+        });
     })
 
-    $("#bg_video").addEventListener('suspend', () => {
-        $("#bg_video")[0].play();
-    });
+
 
   </script>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
