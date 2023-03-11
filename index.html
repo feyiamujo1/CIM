@@ -490,15 +490,16 @@
         $(".preloader_bg").fadeToggle();
         // $("#bg_video")[0].pause();
         $("#bg_video")[0].play();
+        const videoElement = document.getElementById('bg_video');
 
-        $("#bg_video")[0].addEventListener('suspend', () => {
-            $("#bg_video")[0].play();
+        videoElement.addEventListener('suspend', () => {
+            videoElement.play();
         });
         // $("#bg_video")[0].addEventListener('play', () => {
         //     // $("#bg_video")[0].play();
         //     console.log("Playing")
         // });
-        const videoElement = document.getElementById('bg_video');
+        
         if (videoElement.playing) {
             // video is already playing so do nothing
         }
