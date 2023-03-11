@@ -553,8 +553,8 @@ video {
   right: 5rem;
 }
 
-.right-\[10\%\]{
-  right: 10%;
+.right-\[4\.2\%\]{
+  right: 4.2%;
 }
 
 .top-0{
@@ -563,22 +563,6 @@ video {
 
 .top-6{
   top: 1.5rem;
-}
-
-.right-\[5\%\]{
-  right: 5%;
-}
-
-.right-\[3\%\]{
-  right: 3%;
-}
-
-.right-\[4\%\]{
-  right: 4%;
-}
-
-.right-\[4\.2\%\]{
-  right: 4.2%;
 }
 
 .z-10{
@@ -868,6 +852,10 @@ video {
   overflow: hidden;
 }
 
+.overflow-x-hidden{
+  overflow-x: hidden;
+}
+
 .rounded-full{
   border-radius: 9999px;
 }
@@ -950,6 +938,11 @@ video {
 .object-center{
   -o-object-position: center;
      object-position: center;
+}
+
+.object-\[90\%\]{
+  -o-object-position: 90%;
+     object-position: 90%;
 }
 
 .p-2{
@@ -1529,10 +1522,6 @@ body{
 
   .md\:gap-0{
     gap: 0px;
-  }
-
-  .md\:gap-1{
-    gap: 0.25rem;
   }
 
   .md\:py-16{
