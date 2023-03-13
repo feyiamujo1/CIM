@@ -40,7 +40,7 @@
 .containers .container p{
     visibility: hidden;
     opacity: 0;
-    color: black;
+    color: white;
     margin: 10px;
 }
 .card:hover .intro{
@@ -96,7 +96,7 @@
 .containers .container1 p{
     visibility: hidden;
     opacity: 0;
-    color: black;
+    color: white;
     margin: 10px;
 }
 .card1:hover .intro1{
