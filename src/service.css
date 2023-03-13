@@ -1,0 +1,61 @@
+.container .card img{
+    height: 300px;
+    width: 300px;
+    border-radius: 10px;
+}
+.containers {
+    display: grid;
+    position: relative;
+    
+    
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) ;
+}
+.card{
+    margin: 50px;
+    box-shadow: 5px 5px 20px black;
+    overflow: hidden;
+}
+.intro{
+    height: 100px;
+    width: 300px;
+    padding: 1px;
+    box-sizing: border-box;
+    position: absolute;
+    background: rgb(27,27,27, .5);
+    color: white;
+    bottom: 114px;
+    transition: 0.2s;
+    
+}
+.containers .container h1{
+    margin: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.card:hover{
+    cursor: pointer;
+    background: rgb(27,27,27, .5);
+}
+.containers .container p{
+    visibility: hidden;
+    opacity: 0;
+    color: black;
+    margin: 10px;
+}
+.card:hover .intro{
+    height: 220px;
+    bottom: 114px;
+    background: rgb(27,27,27, .5);
+    
+    
+} 
+.card:hover p{
+    opacity: 1;
+    visibility: visible;
+    
+}
+.card:hover img{
+    transform: scale(1.1) rotate(-3deg);
+}
