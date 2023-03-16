@@ -24,7 +24,7 @@
     padding: 1px;
     box-sizing: border-box;
     position: absolute;
-    background: rgba(41, 1, 1, 0.164);
+    background: rgba(41, 1, 1, 0.534);
     color: white;
     bottom: 50px;
     transition: 0.2s;
@@ -82,7 +82,7 @@
     padding: 1px;
     box-sizing: border-box;
     position: absolute;
-    background: rgb(41,1,1, 0.164);
+    background: rgb(41,1,1, 0.534);
     color: white;
     bottom: 50px;
     transition: 0.2s;
@@ -131,7 +131,7 @@
     .containers {
         display: grid;
         grid-template-columns: repeat(1,minmax (0, 1fr));
-        left: -12%;
+        left: -9%;
         border-radius: 10px;
         gap: -2000px;
         width: 100%;
@@ -152,7 +152,7 @@
         padding: 1px;
         box-sizing: border-box;
         position: absolute;
-        background: rgb(27,27,27, .5);
+        background: rgb(27,27,27, 0.534);
         color: white;
         bottom: 50px;
         transition: 0.2s;
@@ -211,7 +211,7 @@
         padding: 1px;
         box-sizing: border-box;
         position: absolute;
-        background: rgb(27,27,27, .5);
+        background: rgb(27,27,27, 0.5345);
         color: white;
         bottom: 50px;
         transition: 0.2s;
