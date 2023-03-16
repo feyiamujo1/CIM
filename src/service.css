@@ -131,7 +131,7 @@
     .containers {
         display: grid;
         grid-template-columns: repeat(1,minmax (0, 1fr));
-        left: -9%;
+        left: -12%;
         border-radius: 10px;
         gap: -2000px;
         width: 100%;
